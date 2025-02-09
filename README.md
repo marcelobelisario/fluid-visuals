@@ -1,3 +1,13 @@
+📌 StudyHub
+Projeto de Engenharia de Software II com objetivo de criar e desenvolver uma pagina web com seu protótipo, front-end e modelo de banco de dados.
+
+Stack utilizada
+Protótipo: Figma
+Front-end: HTML, CSS, JavaScript
+Modelo de Banco de Dados: Br Modelo
+Lins Úteis
+Apresentação do Projeto
+
 **Use your preferred IDE**
 
 If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
