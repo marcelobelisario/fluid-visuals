@@ -1,5 +1,16 @@
-📌 StudyHub
+# 📌 StudyHub
+
 Projeto de Engenharia de Software II com objetivo de criar e desenvolver uma pagina web com seu protótipo, front-end e modelo de banco de dados.
+
+
+
+
+## Stack utilizada
+
+- **Protótipo:** Figma
+- **Front-end:** HTML, CSS, Typescript
+- **Modelo de Banco de Dados:** Br Modelo
+
 
 ## Lins Úteis
 
