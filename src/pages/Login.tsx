@@ -33,12 +33,7 @@ const Login = () => {
           </div>
           <h1 className="text-2xl font-bold text-white mb-2">StudyHub</h1>
           
-          {/* Students Icon */}
-          <img 
-            src="/lovable-uploads/ef6058fe-1d26-40f2-afc6-afa97078d19e.png" 
-            alt="Students" 
-            className="w-32 h-32 object-contain mb-4"
-          />
+          
         </div>
 
         {/* Login Form */}

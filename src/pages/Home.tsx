@@ -47,9 +47,9 @@ const Index = () => {
       {/* Header */}
       <header className="px-6 pt-8 pb-4">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-          Seja Bem vindo
+          Seja Bem Vindo
           <br />
-          <span className="text-blue-600">CEFETIANO !!!</span>
+          <span className="text-blue-600">CEFETIANO!</span>
         </h1>
         
         {/* Search Bar */}
