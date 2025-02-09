@@ -10,6 +10,9 @@ import NotFound from "./pages/NotFound";
 import Desafios from "./pages/Desafios";
 import Quiz from "./pages/Quiz";
 import PDFs from "./pages/PDFs";
+import Favoritos from "./pages/Favoritos";
+import Atualizacoes from "./pages/Atualizacoes";
+import Perfil from "./pages/Perfil";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +29,9 @@ const App = () => (
           <Route path="/desafios" element={<Desafios />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/pdfs" element={<PDFs />} />
+          <Route path="/favoritos" element={<Favoritos />} />
+          <Route path="/atualizacoes" element={<Atualizacoes />} />
+          <Route path="/perfil" element={<Perfil />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
