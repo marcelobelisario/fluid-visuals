@@ -1,12 +1,33 @@
+
 import { Search } from "lucide-react";
 import { useState } from "react";
 import { BookCopy, Code } from "lucide-react";
 import BottomNav from "../components/BottomNav";
 import { cn } from "@/lib/utils";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("Turmas");
   const tabs = ["Turmas", "Desafios", "Quiz", "PDFs"];
+  const navigate = useNavigate();
+
+  const handleTabClick = (tab: string) => {
+    setActiveTab(tab);
+    switch (tab) {
+      case "Turmas":
+        navigate("/home");
+        break;
+      case "Desafios":
+        navigate("/desafios");
+        break;
+      case "Quiz":
+        navigate("/quiz");
+        break;
+      case "PDFs":
+        navigate("/pdfs");
+        break;
+    }
+  };
 
   const courses = [
     {
@@ -48,7 +69,7 @@ const Index = () => {
           {tabs.map((tab) => (
             <button
               key={tab}
-              onClick={() => setActiveTab(tab)}
+              onClick={() => handleTabClick(tab)}
               className={cn(
                 "py-4 text-sm font-medium whitespace-nowrap transition-colors relative",
                 activeTab === tab
