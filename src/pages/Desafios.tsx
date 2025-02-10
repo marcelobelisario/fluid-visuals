@@ -3,10 +3,11 @@ import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
 import BottomNav from "../components/BottomNav";
 import { cn } from "@/lib/utils";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Desafios = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const desafios = [
     {
       disciplina: "Cálculo 1",
@@ -26,6 +27,13 @@ const Desafios = () => {
     },
   ];
 
+  const tabs = [
+    { name: "Turmas", path: "/home" },
+    { name: "Desafios", path: "/desafios" },
+    { name: "Quiz", path: "/quiz" },
+    { name: "PDFs", path: "/pdfs" }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm">
@@ -36,22 +44,19 @@ const Desafios = () => {
           />
           <div className="flex-1 flex justify-center">
             <nav className="flex space-x-8">
-              {[
-                { name: "Turmas", path: "/home" },
-                { name: "Desafios", path: "/desafios" },
-                { name: "Quiz", path: "/quiz" },
-                { name: "PDFs", path: "/pdfs" }
-              ].map((tab) => (
+              {tabs.map((tab) => (
                 <button
                   key={tab.name}
                   onClick={() => navigate(tab.path)}
                   className={cn(
-                    "py-2 text-sm font-medium relative",
-                    tab.name === "Desafios" ? "text-blue-600" : "text-gray-600 hover:text-gray-900"
+                    "py-2 text-sm font-medium relative transition-colors",
+                    location.pathname === tab.path 
+                      ? "text-blue-600" 
+                      : "text-gray-600 hover:text-gray-900"
                   )}
                 >
                   {tab.name}
-                  {tab.name === "Desafios" && (
+                  {location.pathname === tab.path && (
                     <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600" />
                   )}
                 </button>
