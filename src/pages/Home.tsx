@@ -40,21 +40,21 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="px-6 pt-8 pb-4">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+      <header className="px-6 pt-8 pb-6">
+        <h1 className="text-3xl font-extrabold text-gray-800 mb-4">
           Seja Bem-Vindo
           <br />
           <span className="text-blue-600">CEFETIANO!</span>
         </h1>
-        
+
         {/* Search Bar */}
-        <div className="relative">
+        <div className="relative mb-8">
           <input
             type="text"
             placeholder="Buscar..."
-            className="w-full px-4 py-3 pl-12 rounded-xl bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+            className="w-full px-4 py-3 pl-12 rounded-xl bg-white border border-gray-200 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
           />
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5" />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 hover:text-blue-600 transition-colors duration-300" />
         </div>
       </header>
 
@@ -74,7 +74,7 @@ const Index = () => {
             >
               {tab}
               {activeTab === tab && (
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600" />
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-blue-600 transition-all duration-300 ease-in-out" />
               )}
             </button>
           ))}
@@ -82,13 +82,18 @@ const Index = () => {
       </nav>
 
       {/* Course Grid */}
-      <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {courses.map((course) => (
           <div
             key={course.title}
-            className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
+            className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105"
           >
-            <div className={cn("w-16 h-16 rounded-full flex items-center justify-center mb-4", course.color)}>
+            <div
+              className={cn(
+                "w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-all duration-300 ease-in-out",
+                course.color
+              )}
+            >
               <course.icon className="h-8 w-8 text-gray-700" />
             </div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">{course.title}</h3>
