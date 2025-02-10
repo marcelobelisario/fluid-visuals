@@ -1,7 +1,5 @@
-
-import { Search } from "lucide-react";
+import { Search, BookCopy, Code, FlaskConical, Atom, LayoutDashboard, Database, PenTool } from "lucide-react";
 import { useState } from "react";
-import { BookCopy, Code } from "lucide-react";
 import BottomNav from "../components/BottomNav";
 import { cn } from "@/lib/utils";
 import { useNavigate } from "react-router-dom";
@@ -30,16 +28,13 @@ const Index = () => {
   };
 
   const courses = [
-    {
-      title: "Cálculo 1",
-      icon: BookCopy,
-      color: "bg-blue-100",
-    },
-    {
-      title: "Prog 1",
-      icon: Code,
-      color: "bg-cyan-100",
-    },
+    { title: "Cálculo 1", icon: BookCopy, color: "bg-blue-100" },
+    { title: "Prog 1", icon: Code, color: "bg-cyan-100" },
+    { title: "Química", icon: FlaskConical, color: "bg-green-100" },
+    { title: "Física", icon: Atom, color: "bg-purple-100" },
+    { title: "Álgebra Linear", icon: LayoutDashboard, color: "bg-yellow-100" },
+    { title: "Banco de Dados", icon: Database, color: "bg-pink-100" },
+    { title: "Desenho Técnico", icon: PenTool, color: "bg-gray-100" },
   ];
 
   return (
@@ -47,7 +42,7 @@ const Index = () => {
       {/* Header */}
       <header className="px-6 pt-8 pb-4">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-          Seja Bem Vindo
+          Seja Bem-Vindo
           <br />
           <span className="text-blue-600">CEFETIANO!</span>
         </h1>
