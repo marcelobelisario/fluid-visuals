@@ -1,13 +1,19 @@
 
 import { ArrowLeft, User } from "lucide-react";
 import BottomNav from "../components/BottomNav";
+import { useNavigate } from "react-router-dom";
 
 const Perfil = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm">
         <div className="px-4 py-4 flex items-center">
-          <ArrowLeft className="h-6 w-6 text-gray-600" />
+          <ArrowLeft 
+            className="h-6 w-6 text-gray-600 cursor-pointer hover:text-gray-800" 
+            onClick={() => navigate(-1)}
+          />
           <h1 className="ml-4 text-xl font-semibold">Perfil</h1>
         </div>
       </header>
