@@ -3,8 +3,10 @@ import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
 import BottomNav from "../components/BottomNav";
 import { cn } from "@/lib/utils";
+import { useNavigate } from "react-router-dom";
 
 const Desafios = () => {
+  const navigate = useNavigate();
   const desafios = [
     {
       disciplina: "Cálculo 1",
@@ -28,7 +30,10 @@ const Desafios = () => {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm">
         <div className="px-4 py-4 flex items-center">
-          <ArrowLeft className="h-6 w-6 text-gray-600" />
+          <ArrowLeft 
+            className="h-6 w-6 text-gray-600 cursor-pointer hover:text-gray-800" 
+            onClick={() => navigate(-1)}
+          />
           <div className="flex-1 flex justify-center">
             <nav className="flex space-x-8">
               {["Turmas", "Desafios", "Quiz", "PDFs"].map((tab) => (
